@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{company_name}} Careers</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+      #About{
+        background: #BBBBBB;
+      }
+
+      #Positions{
+        background: #BBBBBB;
+      }
+
+      #banner{
+        width: 100%;
+        height: 560px;
+        object-fit: cover;
+      }
+
+      h2{
+        font-family: Roboto;
+        font-size: 32px;
+        color: rgb(100, 100, 100);
+        text-align: center;
+        font-weight: normal;
+      }
+
+      p{
+        font-family: Roboto;
+        color: rgb(80, 80, 80);
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <h1>Hello there, you'll learn about the job openings at Jovian here.</h1>
+    <img src="./static/banner.png" id="banner" alt="banner" height="320px">
+    
+    <div id="About">
+      <h2>About Jovian</h2>
+      <p>ajelRHBWVTREHAWVBTERTW</p>
+      <p>ajelRHBWVTREHAWVBTERTW</p>
+      <p>ajelRHBWVTREHAWVBTERTW</p>
+    </div>
+    <div id="Positions">
+      <h2>Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+          <div style="margin-bottom:16px;">
+            <h4 style="color:rgb(120, 120, 120); margin-bottom:4px; font-size: 32px;">
+              {{job['title']}}
+            </h4>
+            <div><b>Location:</b> {{job['location']}}</div>
+            {% if 'salary' in job%}
+              <div><b>Salary:</b> {{job['salary']}}</div>
+            {% endif %}
+            <hr>
+          </div>
+        {% endfor %}
+        </div>
+      <button>contact us</button>
+    </div>
+    
+    <script src="" async defer></script>
+  </body>
+</html>
